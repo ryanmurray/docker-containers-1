@@ -35,7 +35,7 @@ RUN \
         git\
         python\
         python-dev\
-        python=virtualenv\
+        python-virtualenv\
         python-pip\
         python-setuptools
         python-pkg-resources\
