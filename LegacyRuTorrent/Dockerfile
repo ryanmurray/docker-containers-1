@@ -37,9 +37,7 @@ RUN \
         python-dev\
         python-virtualenv\
         python-pip\
-        python-setuptools
-        build-essential\
-		wget &&\
+        	wget &&\
     rm -rf /var/lib/apt/lists/*
 
 python-setuptools python-pkg-resources git build-essential
