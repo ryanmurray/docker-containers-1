@@ -33,8 +33,25 @@ RUN \
         unrar\
         unzip\
         git\
+        python\
+        python-dev\
+        python=virtualenv\
+        python-pip\
+        python-setuptools
+        python-pkg-resources\
+        build-essential\
 		wget &&\
     rm -rf /var/lib/apt/lists/*
+
+mkdir -p ~/bin ~/lib
+git clone "https://github.com/pyroscope/pyrocore.git" ~/lib/pyroscope
+
+# Pass "/usr/bin/python2", or whatever else fits, to the script,
+# if "/usr/bin/python" is not a suitable version (e.g. Python 3)
+~/lib/pyroscope/update-to-head.sh
+
+# Check success
+pyroadmin --version
 
 # grab gosu for easy step-down from root
 RUN gpg --keyserver pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4
