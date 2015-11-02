@@ -42,7 +42,7 @@ RUN \
 		wget &&\
     rm -rf /var/lib/apt/lists/*
 
-python-pkg-resources git build-essential
+python-setuptools python-pkg-resources git build-essential
 
 mkdir -p ~/bin ~/lib
 git clone "https://github.com/pyroscope/pyrocore.git" ~/lib/pyroscope
